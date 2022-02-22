@@ -1,0 +1,41 @@
+.dropdown {
+  background-color: transparent;
+  color: $lochmara;
+  border: 0;
+  outline: none;
+  &.show .dropdown-toggle,
+  .btn.toggle:active,
+  .btn.toggle:focus,
+  .toggle:hover,
+  .toggle:focus,
+  .toggle.active {
+    background-color: transparent;
+    color: rgba(0, 107, 166, 0.86);
+    text-decoration: underline;
+    box-shadow: none;
+    outline: none;
+  }
+  .btn.dropdown-toggle {
+    background-color: transparent;
+    color: $lochmara;
+    border: 0;
+    outline: none;
+    margin-left: 5px;
+  }
+  .dropdown-item.active,
+  .dropdown-item:hover {
+    background-color: $lochmara;
+    color: $white;
+  }
+  .dropdown-item.active,
+  .dropdown-item:hover {
+    background-color: $lochmara;
+    color: $white;
+  }
+
+  .btn-primary:not(:disabled):not(.disabled):active:focus,
+  .btn-primary:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+  }
+}

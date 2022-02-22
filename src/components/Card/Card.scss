@@ -1,0 +1,40 @@
+@import 'bootstrap-variables';
+@import 'mixins/fonts';
+
+.card {
+  width: 100%;
+  margin-bottom: 15px;
+  border: 0;
+
+  > .title-section {
+    > .title {
+      color: $black;
+      @include font-rem(24);
+      text-align: left;
+      margin-bottom: 10px;
+      font-weight: 200;
+
+      &.site-content-title {
+        @include font-rem(10);
+        font-weight: normal;
+        color: $gray-100;
+        margin: 16px 0 0;
+        background: $white;
+        padding-bottom: 4px;
+      }
+    }
+  }
+
+  .content {
+    color: $black;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    background: $white;
+
+    &.site-content {
+      padding: 0;
+      height: 430px;
+    }
+  }
+}

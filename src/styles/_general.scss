@@ -1,0 +1,16 @@
+@import 'mixins/fonts';
+p {
+  font-size: 1.125rem;
+}
+
+.label {
+  @include font-rem(10);
+  color: $gray;
+  display: block;
+  margin-bottom: 4px;
+}
+.description {
+  @include font-rem(18);
+  padding: 0;
+  margin-bottom: 11px;
+}
