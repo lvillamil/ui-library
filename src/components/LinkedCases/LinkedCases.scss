@@ -1,0 +1,17 @@
+@import 'mixins/fonts';
+@import 'colors';
+
+.linked-cases-wrapper {
+  padding: 15px;
+
+  .reporting-history-content {
+    padding: 5px;
+  }
+
+  .no-cases-found-message {
+    color: $gray;
+    @include font-rem(16);
+    margin-bottom: 0;
+    text-align: center;
+  }
+}

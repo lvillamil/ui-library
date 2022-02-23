@@ -1,0 +1,139 @@
+@import 'mixins/fonts';
+@import 'colors';
+@import 'bootstrap-variables';
+
+.linked-cases-list-item {
+  border: 1px solid $gray;
+  position: relative;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+  .item-header {
+    display: flex;
+    align-items: center;
+    outline: 0;
+
+    .toggle-icon {
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+    }
+
+    .report-header {
+      display: block;
+      width: calc(100% - 25px);
+
+      .case-information {
+        @include font-rem(18);
+
+        .status-badge {
+          margin-left: 12px;
+        }
+        .gray {
+          color: $gray;
+        }
+      }
+
+      .category {
+        color: $gray;
+      }
+
+      .status,
+      .category {
+        &.bad {
+          color: $redOrange;
+        }
+      }
+    }
+  }
+
+  .expanded-content {
+    text-align: left;
+    color: $silver;
+    @include font-rem(18);
+    padding-left: 13px;
+
+    .case-name {
+      color: $gray;
+      margin-bottom: 0;
+    }
+
+    .url {
+      display: block;
+    }
+
+    .result {
+      margin: 10px 0;
+      color: $gray;
+    }
+
+    .button-content {
+      text-align: right;
+      .button-header {
+        color: $white;
+        fill: $white;
+        svg {
+          margin-right: 14px;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    .screenshot-content {
+      margin-bottom: 10px;
+      .screenshot {
+        height: 100%;
+        width: 100%;
+        border: 1px solid $silver;
+      }
+    }
+
+    .label {
+      @include font-rem(10);
+      color: $gray;
+      display: block;
+    }
+
+    .description {
+      color: $black;
+      @include font-rem(18);
+      padding: 0;
+      margin: 0;
+      display: block;
+      margin-bottom: 11px;
+    }
+  }
+
+  .iconbox {
+    position: absolute;
+    top: 20%;
+    right: 0;
+  }
+
+  .remove-btn {
+    background-color: transparent;
+    border: 0;
+  }
+
+  .link-btn {
+    width: 100%;
+    display: block;
+    background-color: transparent;
+    color: $lochmara;
+    border: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+
+    &:hover,
+    &:active {
+      color: rgba(0, 107, 166, 0.86);
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import 'mixins/fonts';
+@import 'colors';
+@import 'bootstrap-variables';
+
+.paginate-wrapper {
+  .paginate-section {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .button {
+      @include font-rem(14);
+      padding: 2px 14px;
+      .arrow-icon {
+        fill: $white;
+        height: 24px;
+        width: 20px;
+      }
+      &.prev {
+        margin-right: 20px;
+      }
+      &.next {
+        margin-left: 20px;
+      }
+    }
+    .static-text {
+      margin: 0 5px;
+      @include font-rem(14);
+    }
+    .input {
+      width: 70px;
+      height: 30px;
+      border: 1px solid $gray;
+      text-align: center;
+    }
+    .select-container {
+      padding: 2px;
+      border: 1px solid $gray;
+      .select {
+        border: none;
+        @include font-rem(14);
+        background: $white;
+        outline: 0;
+      }
+    }
+  }
+}
